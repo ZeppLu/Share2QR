@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Share2QR.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share2QR"
+    RequestedTheme="Light">
+
+</Application>

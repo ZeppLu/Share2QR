@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="Share2QR.Views.ShareTextPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share2QR.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Stretch="None"
+               Visibility="Visible"
+               Source="{x:Bind Model.QrCodeSource, Mode=OneWay}"/>
+
+        <CommandBar Grid.Row="1" VerticalContentAlignment="Top">
+            <CommandBar.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <ProgressRing Grid.Column="0"
+                                  Visibility="Collapsed"
+                                  IsActive="False"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{x:Bind Model.BottomCommandBarText, Mode=OneWay}"
+                               Margin="14">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <ContentThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+                </Grid>
+            </CommandBar.Content>
+
+            <AppBarButton Label="Share"
+                          Visibility="Collapsed">
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72D;"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Icon="Save"
+                          Label="Save"
+                          Click="{x:Bind Model.SaveAsync}">
+                <ToolTipService.ToolTip>Save to file</ToolTipService.ToolTip>
+            </AppBarButton>
+            <AppBarButton Icon="Copy"
+                          Label="Copy"
+                          Click="{x:Bind Model.CopyAsync}">
+                <ToolTipService.ToolTip>Copy to clipboard</ToolTipService.ToolTip>
+            </AppBarButton>
+        </CommandBar>
+    </Grid>
+</Page>
