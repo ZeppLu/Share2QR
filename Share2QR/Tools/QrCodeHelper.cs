@@ -1,5 +1,6 @@
 ﻿using System;
 using Windows.Graphics.Imaging;
+using Windows.UI.Xaml.Media.Imaging;
 using ZXing;
 using ZXing.Common;
 
@@ -37,6 +38,10 @@ namespace Share2QR.Tools
             );
         }
 
-        //public static string decode
+        //public static string Decode(BitmapSource source)
+        //{
+        //    var reader = new BarcodeReader();
+        //    reader.Decode(source);
+        //}
     }
 }

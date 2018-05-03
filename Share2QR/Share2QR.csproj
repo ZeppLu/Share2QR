@@ -11,7 +11,7 @@
     <AssemblyName>Share2QR</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -99,9 +99,13 @@
     <Compile Include="Tools\ClipboardHelper.cs" />
     <Compile Include="Tools\FileHelper.cs" />
     <Compile Include="Tools\QrCodeHelper.cs" />
+    <Compile Include="ViewModels\ShareImageViewModel.cs" />
     <Compile Include="ViewModels\ShareTextViewModel.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShareImagePage.xaml.cs">
+      <DependentUpon>ShareImagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShareTextPage.xaml.cs">
       <DependentUpon>ShareTextPage.xaml</DependentUpon>
@@ -129,6 +133,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShareImagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

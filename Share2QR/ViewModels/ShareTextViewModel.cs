@@ -1,5 +1,4 @@
-﻿using Share2QR.Tools;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -11,6 +10,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+
+using Share2QR.Tools;
 
 namespace Share2QR.ViewModels
 {
